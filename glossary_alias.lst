@@ -1,0 +1,93 @@
+Name	Type	Description	Script Name	AKA	Usage	Uses INFA MX ?	PMREP_Connect ?
+cdhs	CMD	Folder change	n/a	hsh	cdhs	N	N
+cdibin	CMD	Folder change	n/a	ibin	cdibin	N	N
+cdis	CMD	Folder change	n/a	is	cdis	N	N
+cdisbw	CMD	Folder change	n/a	isbw	cdisbw	N	N
+cdiss	CMD	Folder change	n/a	iss	cdiss	N	N
+cdissrc	CMD	Folder change	n/a	n/a	cdissrc	N	N
+cdistgt	CMD	Folder change	n/a	n/a	cdistgt	N	N
+cdsbin	CMD	Folder change	n/a	sbin	cdsbin	N	N
+cdsdb	CMD	Folder change	n/a	sdb	cdsdb	N	N
+cdsjav	CMD	Folder change	n/a	sjav	cdsjav	N	N
+cdtbin	CMD	Folder change	n/a	tbin	cdtbin	N	N
+cdtns	CMD	Folder change	n/a	tns	cdtns	N	N
+chowninfaadm	SHELL		/home/infa_adm/scripts/chowninfaadm.sh	n/a	chowninfaadm <file name>	N	N
+cls	CMD	Clear screen	n/a	n/a	cls	N	N
+color	CMD	Set putty session color	n/a	n/a	color	N	N
+cr	CMD	Carriage return	n/a	n/a	cr	N	N
+deploy	SHELL		/home/infa_adm/scripts/deploy.sh	n/a	"deploy <target host> <file path> <file name>
+deploy <target host> <batch file absolute path>"	N	N
+deploy2all	SHELL		/home/infa_adm/scripts/deploy2all.sh	n/a	deploy2all <file path> <file name>	N	N
+dfw	CMD	Deletes the folders that correspond to WAR files	n/a	n/a	dfw	N	N
+disableuser	INFACMD	Disable INFA user	n/a	n/a	disableuser <INFA userid>	N	N
+dsp	SHELL		/home/infa_adm/scripts/ds_purge.sh	n/a	dsp -d <directory> -r <retention days> [-f Y|N]	N	N
+ebf	CMD	List applied EBFs for INFA	n/a	n/a	ebf	N	N
+enableuser	INFACMD	Enable INFA user	n/a	n/a	enableuser <INFA userid>	N	N
+far	SHELL		/home/infa_adm/scripts/find_replace.sh	n/a	far <{all} | file_name> <find text> <replace text>	N	N
+fc	CMD	File count in the immediate sub-folder under the current folder	n/a	n/a	fc	N	N
+findadgroup	SEC	Find the AD group passed as parameter	n/a	n/a	findadgroup	N	N
+findaduser	SEC	Find the AD user passed as parameter	n/a	n/a	findaduser	N	N
+findcheckout	PMREP	Find Checkouts in entire repository, except Z folders	n/a	n/a	findcheckout	N	Y
+findtext	SHELL		/home/infa_adm/scripts/findtext.sh	n/a	findtext <search text>	N	N
+infafind	INFA		/home/infa_adm/scripts/infa_find.sh	fit	infafind <search text>	Y	N
+formatcert	SEC		/home/infa_adm/scripts/formatcert.sh	n/a	formatcert <PEM file absolute path>	N	N
+fz	CMD	Immediate sub-folder size listing under current folder	n/a	n/a	fz	N	N
+gcd	PMREP	Get INFA relational connection details; Parameter = REL connection name	n/a	n/a	gcd <relational DB connection name>	N	Y
+gcdapp	PMREP	Get INFA application connection details; Parameter = APP connection name	n/a	n/a	gcdapp <application connection name>	N	Y
+gcdftp	PMREP	Get INFA FTP connection details; Parameter = connection name	n/a	n/a	gcdftp <ftp connection name>	N	Y
+gci	PMREP	Get Connection Info (not working)	n/a	n/a	gci	N	Y
+gk	SHELL		/home/infa_adm/scripts/glossary_knowledgebase.sh	n/a	gk <search text>	N	N
+grsd	PMCMD	Get INFA running session details	n/a	n/a	grsd	N	N
+gtd	PMCMD	Get Task Details; parameters -f(folder) -w(workflow) (session)	n/a	n/a	gtd -f <folder> -w <workflow> <session>	N	N
+gwd	PMCMD	Get workflow details; Parameters = <folder> <workflow>	n/a	n/a	gwd <folder> <workflow>	N	N
+hc	CMD	Clear history	n/a	n/a	hc	N	N
+idle	CMD	Keeps the putty session idle	n/a	n/a	idle	N	N
+infa_email	SHELL	Sends email to $INFA_NOTIFY with high importance and priority with altered sender name	/home/infa_adm/scripts/infa_email.sh	n/a	infa_email <subject> <body>	N	N
+infacleanup	SHELL		/home/infa_adm/scripts/infacleanup.sh	n/a	infacleanup	N	N
+infashutdown	INFA	Wrapper for shutting down INFA services	n/a	n/a	infashutdown	N	N
+infastartup	INFA	Wrapper for starting up INFA services	n/a	n/a	infastartup	N	N
+ipl	SHELL		/home/infa_adm/scripts/ipl.sh	n/a	ipl	N	N
+kuc	PMREP	Kill PC user connection; Run PMC first; Parameter = username	n/a	n/a	kuc <INFA userid>	N	Y
+lac	PMREP	List all PC connections; Run PMC first	n/a	n/a	lac	N	Y
+lau	INFACMD	List all users	n/a	n/a	lau	N	N
+lg4u	INFACMD	List the groups in which the user exists	n/a	n/a	lg4u <INFA userid>	N	N
+listcacerts	SEC	List all certs under the system keystore	n/a	n/a	listcacerts	N	N
+llp	CMD	List the listening ports	n/a	n/a	llp	N	N
+lod	PMREP	List child dependencies; Parameter = ObjectName	n/a	n/a	lod -n <object name> -t <workflow|session> -f <folder>	N	Y
+lssp	CMD	Long listing of files sorted by permissions	n/a	n/a	lssp	N	N
+luc	PMREP	List all active PC connections	n/a	n/a	luc	N	Y
+luperms	INFACMD	List User Permisions; parameter = userid	n/a	n/a	luperms <INFA userid>	N	N
+luprivs	INFACMD	List User Privileges; parameters = -eu(existing user) and -sn(service name)	n/a	n/a	luprivs -eu <INFA userid> -sn <security domain>	N	N
+nodelog	CMD	Display the contents of file node.log 	n/a	n/a	nodelog	N	N
+odbcfind	SHELL	Display the entry where the parameter is like the ODBC key	/home/infa_adm/scripts/odbcfind.sh	n/a	odbcfind <search text>	N	N
+pmc	PMREP	Pmrep connect	n/a	n/a	pmc	N	N
+pmd	PMREP	Pmrep disconnect	n/a	n/a	pmd	N	N
+psjc	INFACMD	Process list count 	n/a	n/a	psjc	N	N
+psjcloop	CMD	Process list count in a loop	n/a	n/a	psjcloop	N	N
+psjl	INFACMD	Process list detail	n/a	n/a	psjl	N	N
+psjloop	INFACMD	Process list detail and count in a loop	n/a	n/a	psjloop	N	N
+qc	SHELL	Quality Control script	/home/infa_adm/scripts/qualitycheck.sh	n/a	qc <folder> <Workflow|Session> <object name>	N	N
+rdp	CMD	run bash_profile	n/a	n/a	rdp	N	N
+rst_wsh	CMD	Lists the time at which the WSH (aka) Web Service Hub was restarted	n/a	n/a	rst_wsh	N	N
+rup	INFACMD	reset user password; parameter "-ru" and "-rp"	n/a	n/a	rup -ru <INFA userid> -rp <new password>		N
+scanconn	CMD	List connections that match a pattern with the connection & TNS details	n/a	n/a	scannconn <search text>	N	Y
+serverconfig	INFACMD	List server configuration	n/a	n/a	serverconfig	N	N
+showc	SHELL		/home/infa_adm/scripts/showconn.sh	lc		Y	N
+showcertinfo	SEC		/home/infa_adm/scripts/showcertinfo.sh 	n/a			N
+showcp	SHELL		/home/infa_adm/scripts/show_conn_perms.sh	lcp		Y	N
+showct	SHELL	Check script - show_crontab.sh	/home/infa_adm/scripts/show_crontab.sh	sct		N	N
+showfp	SHELL	Check script - show_folder_perms.sh 	/home/infa_adm/scripts/show_folder_perms.sh 	lfp		Y	N
+showrj	SHELL	Show active INFA jobs	/home/infa_adm/scripts/show_running_jobs.sh	lrj		N	N
+showso	SHELL	Check script - rass.sh 	/home/infa_adm/scripts/rass.sh 	lso		Y	N
+showto	SHELL	Check script - rats.sh 	/home/infa_adm/scripts/rats.sh 	lst		Y	N
+showvh	INFA	Check script - show_version_history.sh	/home/infa_adm/scripts/show_version_history.sh	n/a			N
+ssh_broadcast	SHELL	Check script - ssh_broadcast.sh	/home/infa_adm/scripts/ssh_broadcast.sh	n/a		N	N
+tall	CMD	Touch all files in the current folder	n/a	n/a		N	N
+testconn	SHELL	Check script - testconn.sh	/home/infa_adm/scripts/testconn.sh	n/a		N	N
+tnsfind	CMD	Check for a pattern in the TNS file; Parameter = pattern	n/a	n/a		N	N
+tnshostlist	CMD	List the hosts from the TNS file	n/a	n/a		N	N
+tnsnc	CMD	Check FW connectivity for all hosts in the TNS file @ the port used	n/a	n/a		N	N
+ucutf	PMREP	Update connection's codepage to UTF-8. Parameter = connection name	n/a	n/a			Y
+x	CMD	exit current putty session	n/a	n/a		N	N
+yoda	CMD	Display the contents of file yoda.log 	n/a	n/a		N	N
+

@@ -1,0 +1,48 @@
+ad_checkfilecount.sh	n/a	$HOME/scripts/	 ./ad_checkfilecount.sh	Gets the ZIP file count in the folder (sj_ad_files) from all INFA hosts **DEV node1 only**	N	n/a	N
+ad_cleanup.sh	n/a	$HOME/scripts/	 ./ad_cleanup.sh	Deletes files in folder (sj_ad_files) from all INFA hosts  **DEV node1 only**	N	n/a	N
+ad_createfilelst.sh	n/a	$HOME/scripts/	 ./ad_createfilelst.sh	Creates a file list (av.lst) that was formerly used by (ad_deploy2all.sh)  **DEV node1 only**	N	n/a	N
+ad_deploy2all.sh	n/a	$HOME/scripts/	 ./ad_deploy2all.sh	Copies files to all INFA hosts using SCP. This script was formerly using (deploy.sh)  **DEV node1 only**	Y	n/a	N
+ad_unzip.sh	n/a	$HOME/scripts/	 ./ad_unzip.sh	Unzips ZIP files in the folder (sj_ad_files) and copies the MD files to \$INFA_HOME/services/DQContent/INFA_Content/av/default	Y	n/a	N
+ad_unzip_all.sh	n/a	$HOME/scripts/	 ./ad_unzip_all.sh	Wrapper script for scripts (ad_createfilelst.sh, ad_deploy2all.sh, ./ad_checkfilecount.sh and  ad_unzip.sh) . Script (ad_unzip.sh) is run all INFA hosts using SSH  **DEV node1 only**	Y	n/a	N
+ais.sh	n/a	$HOME/scripts/	 ./ais.sh <folder> <workflow> <intsvc>	Assign Integration Service	Y	n/a	N
+ca-bundle-break.sh	n/a	$HOME/scripts/	 ./ca-bundle-break.sh	This script breaks down the CA-BUNDLE.CRT file into seperate CRT files under "/u01/informatica/ssl/other_certs/ca-bundle-break/"	Y	n/a	N
+ca-bundle-info.sh	n/a	$HOME/scripts/	 ./ca-bundle-info.sh	This is a continuation of script [ca-bundle-break.sh]. This script combines the header information of all CRT files in the path below into [ca-bundle-info.txt]	Y	n/a	N
+chowninfaadm.sh	n/a	$HOME/scripts/	 ./chowninfaadm.sh <file_name>	Changes the ownership of a file to "infa_adm" without being a "root" user, but under a folder owned by "infa_adm"	Y	n/a	N
+cpst.sh	cpst	$HOME/scripts/	 ./cpst.sh <object type (S|T)> <src folder> <tgt folder> <object name>	INFA source/target copy utility	N	n/a	N
+deploy.sh	deploy	$HOME/scripts/	(1)  ./deploy.sh <target host> <file path> <file name>	Script to copy a single file to a remote location or multiple files in different locations in a remote server. 3 parameters would indicate single file mode and 2 parameters would indicate batch mode.	Y	n/a	N
+deploy.sh	deploy	$HOME/scripts/	(2)  ./deploy.sh <target host> <batch file name>	Script to copy a single file to a remote location or multiple files in different locations in a remote server. 3 parameters would indicate single file mode and 2 parameters would indicate batch mode. The batch file format is "file_name|local_file_path|remote_file_path"	Y	n/a	N
+deploy2all.sh	deploy2all	$HOME/scripts/	 ./deploy2all.sh <file path> <file name>	Script to deploy file(s) to multiple servers with which SSH keys have been exchanged	Y	n/a	N
+disk_space_monitor.sh	n/a	$HOME/scripts/	 ./disk_space_monitor.sh	Monitors the free space in various mounts and sends out an email notification; RED over 95%, AMBER over 85% and WARNING over 75%	Y	Every 5 minutes	N
+ds_purge.sh	dsp	$HOME/scripts/	 ./ds_purge.sh -d <directory path> -r <retention period> [-f (Y|N)]	Multi-threaded purge mechanism for files on disk. Setting the optional parameter to Y will purge just the files in the selected directory and sub-folders will not be affected.	Y	n/a	N
+find_replace.sh	far	$HOME/scripts/	./find_replace.sh <{all}|file_name> <find_text> <replace_text>	This script performs a Find and Replace of a text in a file or files in the current folder	Y	n/a	N
+findDBobject.sh	n/a	$HOME/scripts/	 ./findDBobject.sh <DB object name>	Queries the data-dictionary tables of the databases listed in the file $HOME/scripts/dbpass.txt . This script is used before copying objects into the shared folder to confirm if the requested destination is in alignment with the database & schema in which the object resides.	N	n/a	N
+findtext.sh	findtext	$HOME/scripts/	 ./findtext.sh <search text>	This is a slightly improved version of the command to find a text within files recursively in a folder. It displays the list of files containing the search text and also displays the line in which the search text is used.	N	n/a	N
+formatcert.sh	formatcert	$HOME/scripts/	formatcert <PEM cert file name>	Provides header information for a certificate in PEM format. The output given by this script can be added to the CA bundle file	Y	n/a	N
+gpg_decrypt.sh	n/a	$HOME/scripts/	 ./gpg_decrypt.sh <project name> <absolute file path of encrypted file> <absolute file of the decrypted file>	Decrypts a file that is encrypted using the GPG utility. The GPG passcode is stored in the file $HOME/scripts/gpg_pass.txt	Y	n/a	N
+icgt.sh	n/a	$HOME/scripts/	 ./icgt.sh <search pattern>	This is a INFA Connection Grep Tool. It looks for relational connections that match the search pattern and provides connection details and the connect string details. This supports only the TNS connect strings at this time 	Y	n/a	Y
+infa_backup.sh	n/a	$HOME/scripts/	 ./infa_backup.sh	Takes a backup of the Domain, PowerCenter Repository, Model Repository, Metadata Manager. An email is sent once the script is complete irrespective of the status of the backup routine. This script also performs a purge of the older backup & log files with a 7 day retention period	Y	Daily @ 6pm CST	N
+infa_email.sh	n/a	$HOME/scripts/	 ./infa_email.sh <subject> <body>	Sends an email to INFA_NOTIFY with the given Subject and Body	Y	n/a	N
+infa_find.sh	infafind	$HOME/scripts/	 ./infa_find.sh <search pattern> [0|1]	List INFA objects that match or is like the search pattern passed as parameter	N	n/a	N
+infa_monitor_v2.sh	n/a	$HOME/scripts/	 ./infa_monitor_v2.sh	Monitors the INFA services - Nodes, PC-RepSvc, PC-IntSvc, WSH, MRS, AS, Data-IntSvc, MMS and CMS	Y	Every 5 minutes	N
+infacleanup.sh	n/a	$HOME/scripts/	 ./infacleanup.sh	This is an interative script to perform cleanup of INFA files before starting services. The folders are listed in the file $HOME/scripts/infacleanup.lst . The files with "war" extension are skipped	Y	n/a	N
+infaprocesscheck.sh	n/a	$HOME/scripts/	infaprocesscheck.sh <mode (0|1)>	This script can be used to monitor the processes as INFA services are startup(1) or shutdown(0). This is still WIP	Y	n/a	N
+intruder_alert.sh	n/a	$HOME/scripts/	 ./intruder_alert.sh	Checks for unauthorized use of infa_adm user. The file that is used to confirm an authorized access is $HOME/scripts/machine_names.lst	Y	Every 5 minutes	N
+ipl.sh	ipl	$HOME/scripts/	 ./ipl.sh	Lists the INFA services with the process ID	Y	n/a	N
+nohup_purge.sh	n/a	$HOME/scripts/	 ./nohup_purge.sh <foler path> <retention period days> & 	This script helps in purging files from a folder for a given retention period. This is an interim alternative to ds_purge.sh	Y	n/a	N
+odbcfind.sh	odbcfind	$HOME/scripts/	odbcfind <search pattern>	Lists the ODBC file entries for the ODBC keys that match the search pattern	Y	n/a	N
+qualitycheck.sh	qc	$HOME/scripts/	qc <folder name> <(Workflow|Session)> <object name>	This tool helps in reviewing an INFA workflow, worklet or session. This is an interactive script, which will require some manual inspection of the results	N	n/a	Y
+rass.sh	sso	$HOME/scripts/	lso <search pattern> <(0|1)>	Lists the entries from REP_ALL_SOURCES where name of the source object matches the search pattern. The 2nd parameter determines the comparison rule - 0 for EQUAL-TO and 1 for LIKE	N	n/a	N
+rats.sh	sto	$HOME/scripts/	lto <search pattern> <(0|1)>	Lists the entries from REP_ALL_TARGETS where name of the target object matches the search pattern. The 2nd parameter determines the comparison rule - 0 for EQUAL-TO and 1 for LIKE	N	n/a	N
+scan_core.sh	n/a	$HOME/scripts/	 ./scan_core.sh	Scans for CORE files created by INFA and alert INFA-Admins. These core files may have to be stared with INFA GCS for further analysis	Y	n/a	N
+search_system_keystore.sh	n/a	$HOME/scripts/	./search_system_keystore.sh	Search for alias & fingerprint in the system keystore $JRE_HOME/lib/security/cacerts. This is an interactive script	Y	n/a	N
+show_conn_perms.sh	scp	$HOME/scripts/	scp <connection name>	Lists the permission details for the given INFA connection by querying OPB_CNX, OPB_OBJECT_ACCESS and OPB_USER_GROUP	N	n/a	N
+show_crontab.sh	sct	$HOME/scripts/	 ./show_crontab.sh	Lists the crontab entries in all the environments	N	n/a	N
+show_folder_perms.sh	sfp	$HOME/scripts/	 ./show_folder_perms.sh <folder name>	Lists the permission details for the given INFA folder by querying OPB_SUBJECT, OPB_OBJECT_ACCESS and OPB_USER_GROUP	N	n/a	N
+show_recent_run_history.sh	showrrh	$HOME/scripts/	 ./show_recent_run_history.sh <folder> <INFA object name>	Lists the run history where the object name matches either the workflow or the session name	N	n/a	N
+show_running_jobs.sh	srj	$HOME/scripts/	 ./show_running_jobs.sh	Lists the INFA running jobs with folder, workflow & task name and user name, integration service & debug mode	N	n/a	N
+show_version_history.sh	svh	$HOME/scripts/	 ./show_version_history.sh <folder name> <object name>	Displays the query results from view SJ_ALL_VERSION_PROPS	N	n/a	N
+showcertinfo.sh	showcertinfo	$HOME/scripts/	showcertinfo <PEM cert file name>	This is similar to the script $HOME/scripts/formatcert.sh , but without the PEM data	Y	n/a	N
+showconn.sh	sc	$HOME/scripts/	./showconn.sh <search pattern>	Lists the records from SJ_CNX view where the search pattern is found either in connection name, user name or the connect string	N	n/a	N
+ssh_broadcast.sh	ssh_broadcast	$HOME/scripts/	ssh_broadcast '<command>'	This will issue the command in all the environment hosts	Y	n/a	N
+testconn.sh	testconn	$HOME/scripts/	testconn <connection name> <(oracle|sqlserver|pgsql)>	Tests the relational connection	Y	n/a	N
+

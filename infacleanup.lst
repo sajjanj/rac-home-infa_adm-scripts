@@ -1,0 +1,14 @@
+/infa_shared/LogSvcDir/node01_dhvifoapp01
+/apps/informatica/v10.1.0/logs/node01_dhvifoapp01
+#/apps/informatica/v10.1.0/logs/node02_dhvifoapp02
+/apps/informatica/v10.1.0/services/AdministratorConsole/webapps
+/apps/informatica/v10.1.0/services/AnalystService
+/apps/informatica/v10.1.0/services/ContentManagementService
+/apps/informatica/v10.1.0/services/DataIntegrationService
+/apps/informatica/v10.1.0/services/IDDService
+/apps/informatica/v10.1.0/services/IntelligentDQService
+/apps/informatica/v10.1.0/services/MetadataManagerService/mmapps
+/apps/informatica/v10.1.0/services/WebServiceHub
+/apps/informatica/v10.1.0/tomcat/temp
+/apps/informatica/v10.1.0/tomcat/webapps
+/apps/informatica/v10.1.0/tomcat/work
